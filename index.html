@@ -1,71 +1,71 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="UTF-8">
-    <title>PPT模拟器下载</title>
-    <style>
-        body {
-            background-image: url('background.png');
-            background-size: cover;
-            background-repeat: no-repeat;
-            background-position: center;
-            margin: 0;
-            padding: 0;
-        }
-        .content {
-            text-align: center;
-            padding: 100px;
-            color: black;
-            font-family: Arial, sans-serif;
-            font-size: 24px;
-        }
-        .container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin-bottom: 20px;
-        }
-        .box {
-            background-color: rgba(255, 255, 255, 0.5);
-            border-radius: 10px;
-            padding: 20px;
-            margin: 10px;
-        }
-        .container img {
-            max-width: 200px;
-            height: auto;
-            margin-top: 10px;
-            cursor: pointer;
-        }
-        .container p {
-            margin-top: 10px;
-            color: black;
-        }
-        .container a {
-            display: block; /* 使超链接成为块级元素 */
-            color: black;
-            text-decoration: underline;
-            margin-top: 10px;
-        }
-    </style>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+/* 添加样式 */
+
+body {
+  background-color: #f5f5f5;
+  margin: 0;
+  padding: 0;
+}
+
+.background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999; /* 设置较高的层级，确保在最上层显示 */
+  opacity: 1; /* 设置为不透明 */
+  pointer-events: auto; /* 可以点击背景 */
+}
+
+.popup-window {
+  width: 80%;
+  max-width: 400px;
+  height: 300px;
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.text {
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.link {
+  font-size: 18px;
+  color: #4285f4;
+  text-decoration: none;
+}
+</style>
 </head>
 <body>
-    <div class="content">
-        <h1>PPT模拟器下载</h1>
-        <div class="container">
-            <div class="box">
-                <a href="file1.jpg" download>
-                    <img src="1.png" alt="图片1">
-                </a>
-                <p>iPhone 4</p>
-                <a href="https://2s44.github.io/kwxa2s4/HV1.html">下载历史版本</a> <!-- 添加超链接 -->
-            </div>
-            <div class="box">
-                <img src="2.png" alt="图片2">
-                <p>bilibiliOS</p>
-                <a href="https://2s44.github.io/kwxa2s4/HV2.html">下载历史版本</a> <!-- 添加超链接 -->
-            </div>
-        </div>
-    </div>
+<!-- 添加背景 -->
+<div class="background">
+  <!-- 弹出窗口内容 -->
+  <div class="popup-window">
+    <div class="text">我们搬家了</div>
+    <a class="link" href="https://2s44.github.io/kwxa2s4/">新网址请点击这里</a>
+  </div>
+</div>
+
+<!-- 其他页面内容 -->
+<p>关闭网站已获得作者的允许，此页面由系统生成</p>
+
 </body>
 </html>
