@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>邀请码填写</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body {
+            background-image: url('background.png');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 400px;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.7); /* 半透明背景颜色 */
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        h1 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        
+        input {
+            display: block;
+            width: 100%;
+            height: 40px;
+            padding: 5px 10px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            font-size: 16px;
+        }
+        
+        .input-group {
+            display: flex;
+            justify-content: space-between;
+        }
+        
+        .separator {
+            display: flex;
+            align-items: center;
+        }
+        
+        .separator::before,
+        .separator::after {
+            content: "-";
+            margin: 0 5px;
+            font-weight: bold;
+        }
+        
+        button {
+            display: block;
+            width: 100%;
+            height: 40px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        
+        button:hover {
+            background-color: #45a049;
+        }
+        
+        p.error-message {
+            color: red;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>邀请码填写</h1>
+    <div class="input-group">
+        <input type="text" id="segment1">
+        <div class="separator"></div>
+        <input type="text" id="segment2">
+        <div class="separator"></div>
+        <input type="text" id="segment3">
+        <div class="separator"></div>
+        <input type="text" id="segment4">
+        <div class="separator"></div>
+        <input type="text" id="segment5">
+    </div>
+    <button onclick="submitInviteCode()">提交</button>
+    <p id="error-message" class="error-message"></p>
+</div>
+
+<script>
+    function submitInviteCode() {
+        var segment1 = document.getElementById("segment1").value;
+        var segment2 = document.getElementById("segment2").value;
+        var segment3 = document.getElementById("segment3").value;
+        var segment4 = document.getElementById("segment4").value;
+        var segment5 = document.getElementById("segment5").value;
+        
+        // 判断邀请码是否合法
+        if (segment1 !== "s" || segment2 !== "7" || segment3 !== "4" || segment4 !== "r" || segment5 !== "q") {
+            document.getElementById("error-message").textContent = "邀请码不正确";
+            return; // 阻止继续执行
+        }
+        
+        // TODO: 处理邀请码的逻辑，验证成功后继续执行以下代码
+        
+        // 创建虚拟的<a>元素并设置href属性为要下载的文件链接
+        var downloadLink = document.createElement("a");
+        downloadLink.href = "文件下载链接";
+        
+        // 设置下载文件的属性
+        downloadLink.setAttribute("download", "文件名");
+        
+        // 触发点击事件开始下载文件
+        downloadLink.click();
+        
+        // 跳转到新页面
+        window.location.href = "新页面的URL";
+    }
+</script>
+</body>
+</html>
