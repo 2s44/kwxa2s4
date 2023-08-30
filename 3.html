@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>视频分享页面</title>
+    <style>
+        body {
+            background-color: #f2f2f2;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            text-align: center;
+            padding: 20px;
+            color: #333;
+        }
+
+        .video-container {
+            width: 80%;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+
+        .video-wrapper {
+            border-radius: 5px;
+            overflow: hidden;
+            transition: transform 0.3s ease-in-out;
+            background-clip: padding-box; /* 将背景剪切为圆角 */
+        }
+
+        video {
+            width: 100%;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        video.small {
+            transform: scale(0.8);
+        }
+
+        video:hover {
+            transform: scale(1.1);
+        }
+
+        .download-button {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        a {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #333;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        a:hover {
+            background-color: #555;
+        }
+    </style>
+</head>
+<body>
+    <h1>视频分享</h1>
+    <div class="download-button">
+        <a href="video.mp4" download>下载视频</a>
+    </div>
+    <div class="video-container">
+        <div class="video-wrapper">
+            <video class="small" controls onclick="this.classList.toggle('small'); this.play();">
+                <source src="video.mp4" type="video/mp4">
+                Your browser does not support HTML5 video.
+            </video>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
